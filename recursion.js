@@ -1,12 +1,11 @@
 'use strict';
 var counter = 0;
-var greetThrice = function(name){
-  name = name || "Nameless";
-  console.log(`Hi ${name}`);
+var greetThrice = function(names){
+  console.log(`Hi ${names[counter]}`)
   counter++
-  if (counter === 3 ) return "Done greeting";
-  return greetThrice("Christine");
+  if (counter === 3 ) return "\n==Done greeting today==";
+  return greetThrice(names);
 
 }
 
-console.log(greetThrice());
+console.log(greetThrice(["Christine", "Ritah", "Nagadya", "Another", "One"]));
